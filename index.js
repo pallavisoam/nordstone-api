@@ -31,7 +31,7 @@ const calculateData = (value1, value2, operation) => {
     })
 }
 
-app.post('/calculator-api', (req, res) => {
+app.post('/api/calculator-api', (req, res) => {
     const data = req.body
     calculateData(data.value1, data.value2, data.operation).then((data) => {
         res.status(200).send({ data: data })
